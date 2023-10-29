@@ -4,7 +4,7 @@
 
 import unittest
 from models.base_model import BaseModel
-ifrom models.city import City
+from models.city import City
 
 
 class TestCity(unittest.TestCase):
