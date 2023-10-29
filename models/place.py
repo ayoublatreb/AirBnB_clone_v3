@@ -45,7 +45,7 @@ class Place(BaseModel, Base):
         self.number_rooms = 0
         self.price_by_night = 0
         self.user_id = ""
-
+        self.city_id = ""
         
     __tablename__ = "places"
     city_id = Column(String(60), ForeignKey("cities.id"), nullable=False)
