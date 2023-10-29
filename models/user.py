@@ -16,7 +16,7 @@ class User(BaseModel, Base):
          first_name: first name
         last_name: last name
     """
-    def __init__(self):
+ def __init__(self):
         super().__init__()
         self.email = ""
         self.first_name = ""

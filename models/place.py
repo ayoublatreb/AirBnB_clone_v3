@@ -34,7 +34,7 @@ class Place(BaseModel, Base):
         longitude: longitude in float
         amenity_ids: list of Amenity ids
     """
-    def __init__(self):
+def __init__(self):
         super().__init__()
         self.description = "" 
         self.latitude = 0.0
