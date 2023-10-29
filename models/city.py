@@ -14,6 +14,12 @@ class City(BaseModel, Base):
         state_id: The state id
         name: input name
     """
+    def __init__(self, *args, **kwargs):
+        """City constructor"""
+        super().__init__(*args, **kwargs)
+        self.name = ""
+        self.state_id = ""
+
     __tablename__ = "cities"
     name = Column(String(128), nullable=False)
     state_id = Column(String(60), ForeignKey('states.id'), nullable=False)
