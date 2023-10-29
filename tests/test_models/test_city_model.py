@@ -3,9 +3,7 @@
 """ module containing tests for class City """
 
 import unittest
-from models.base_model import BaseModel
-from models.city import City
-
+from models.city import City  # Import City from the correct module
 
 class TestCity(unittest.TestCase):
     """ tests for class City """
@@ -35,4 +33,5 @@ class TestCity(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 
