@@ -24,4 +24,5 @@ class TestAmenity(unittest.TestCase):
         """ test name """
         test_amenity = Amenity()
         name_value = getattr(test_amenity, "name")
+        print("Actual 'name' attribute value:", name_value)
         self.assertIsInstance(name_value, str)
