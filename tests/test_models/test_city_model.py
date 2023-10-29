@@ -4,31 +4,35 @@
 
 import unittest
 from models.base_model import BaseModel
-from models.city import City
+ifrom models.city import City
 
 
-class TestUser(unittest.TestCase):
+class TestCity(unittest.TestCase):
     """ tests for class City """
 
     def test_City_inheritance(self):
-        """ test that city is a subclass of basemodel """
+        """ test that City is a subclass of BaseModel """
         test_city = City()
         self.assertIsInstance(test_city, BaseModel)
 
-    def test_User_attributes(self):
+    def test_City_attributes(self):
         """ test attributes """
         test_city = City()
-        self.assertTrue("state_id" in test_city.__dir__())
-        self.assertTrue("name" in test_city.__dir__())
+        self.assertTrue("state_id" in test_city.__dict__)
+        self.assertTrue("name" in test_city.__dict__)
 
-    def test_type_name(self):
-        """ test name """
+    def test_state_id_type(self):
+        """ test state_id data type """
+        test_city = City()
+        state_id = getattr(test_city, "state_id")
+        self.assertIsInstance(state_id, str)
+
+    def test_name_type(self):
+        """ test name data type """
         test_city = City()
         name = getattr(test_city, "name")
         self.assertIsInstance(name, str)
 
-    def test_type_name(self):
-        """ test name """
-        test_city = City()
-        name = getattr(test_city, "state_id")
-        self.assertIsInstance(name, str)
+if __name__ == '__main__':
+    unittest.main()
+
