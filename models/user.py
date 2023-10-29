@@ -13,9 +13,16 @@ class User(BaseModel, Base):
     Attributes:
         email: email address
         password: password for you login
-        first_name: first name
+         first_name: first name
         last_name: last name
     """
+    def __init__(self):
+        super().__init__()
+        self.email = ""
+        self.first_name = ""
+        self.last_name = ""
+        self.password = ""
+
     __tablename__ = "users"
     email = Column(String(128), nullable=False)
     password = Column(String(128), nullable=False)
