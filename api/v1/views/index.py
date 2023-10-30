@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""define routes of blueprint
-"""
+"""define routes """
 
 from api.v1.views import app_views
 from models import storage
