@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i#!/usr/bin/python3
 
 """ module containing tests for class Amenity """
 
@@ -22,6 +22,6 @@ class TestAmenity(unittest.TestCase):
 
     def test_Amenity_attribute_type(self):
         """ test name """
-        test_amenity = Amenity()
+        test_amenity = Amenity(name="Test Amenity Name")
         name_value = getattr(test_amenity, "name")
         self.assertIsInstance(name_value, str)
