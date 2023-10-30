@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Endpoint (route) will be to return the status of your API"""
+"""Endpoint (route) will be to return the status
+of your API"""
 import os
 from flask import Flask
 from models import storage
